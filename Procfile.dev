@@ -1,0 +1,2 @@
+web: bin/rails s -p $RAILS_PORT
+webpack: bin/webpack-dev-server
