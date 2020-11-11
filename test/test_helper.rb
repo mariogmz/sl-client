@@ -6,7 +6,7 @@ require 'rails/test_help'
 
 require 'minitest/pride'
 require 'mocha/minitest'
-require 'webmock/test_unit'
+require 'webmock/minitest'
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
@@ -15,4 +15,4 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-Dir['./test/support/**/*'].sort.each { |f| require f }
+Dir['./test/support/**/*.rb'].sort.each { |f| require f }
