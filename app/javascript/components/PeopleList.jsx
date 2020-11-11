@@ -4,7 +4,7 @@ import { DataGrid } from "@material-ui/data-grid";
 import styled from "styled-components";
 
 const StyledPeopleList = styled.div`
-  flex: 1;
+  height: 100vh;
   width: 100%;
 `;
 
