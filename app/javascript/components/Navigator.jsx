@@ -8,7 +8,7 @@ import Fab from "@material-ui/core/Fab";
 const StyledNavigator = styled.section`
   bottom: .25rem;
   left: 1rem;
-  position: absolute;
+  position: fixed;
 
   .navigator-actions {
     padding: .5rem;

@@ -29,7 +29,7 @@ module SalesLoft
     def request(method = :get, route = '', options = {})
       result = RestClient.send(method, endpoint(route), options.merge(@headers))
       if result.code >= 200 && result.code < 300
-        return JSON.parse(result.body).to_h.symbolize_keys
+        return HashWithIndifferentAccess.new(JSON.parse(result.body))
       end
 
       result

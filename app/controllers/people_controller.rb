@@ -8,7 +8,7 @@ class PeopleController < ApplicationController
   end
 
   def frequency
-    @data = []
+    @data = SalesLoft::PeopleService.frequency_count(@client.people[:data])
   end
 
   def duplicates

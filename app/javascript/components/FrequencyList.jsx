@@ -11,29 +11,25 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 const StyledFrequencyList = styled.div`
-  .MuiTableCell-head {
-    width: 50%;
-  }
+  margin-bottom: 60px;
 `;
 
-const OcurrencesList = ({ people }) => {
+const FrequencyList = ({ data }) => {
   return (
     <StyledFrequencyList className="frequency-list">
       <TableContainer component={Paper}>
         <Table aria-label="frequency table">
           <TableHead>
             <TableRow>
-              <TableCell>Email</TableCell>
               <TableCell>Character</TableCell>
               <TableCell>Count</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {people.map((person) => (
-              <TableRow key={person.id}>
-                <TableCell>{person.email}</TableCell>
-                <TableCell>{person.character}</TableCell>
-                <TableCell>{person.fat}</TableCell>
+            {data.map((row) => (
+              <TableRow key={row.letter}>
+                <TableCell>{row.letter}</TableCell>
+                <TableCell>{row.frequency}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -43,8 +39,8 @@ const OcurrencesList = ({ people }) => {
   );
 }
 
-OcurrencesList.propTypes = {
-  people: PropTypes.array.isRequired,
+FrequencyList.propTypes = {
+  data: PropTypes.array.isRequired,
 };
 
-export default OcurrencesList;
+export default FrequencyList;

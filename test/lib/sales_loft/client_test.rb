@@ -18,7 +18,7 @@ module SalesLoft
 
     test "successful request" do
       stub_get_people_sucess
-      assert_instance_of Hash, @subject.people
+      assert_instance_of HashWithIndifferentAccess, @subject.people
     end
 
     test "request failure" do
