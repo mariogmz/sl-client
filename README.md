@@ -1,24 +1,54 @@
-# README
+# SalesLoft Client for People
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to this humble and fun project built with so much love using Ruby on
+Rails and React, before cloning the project locally some requirements are
+needed:
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- Ruby 2.7.2
+- Node 12.16.2
+- Bundler 2
 
-* System dependencies
+## Install
 
-* Configuration
+It's a regular RoR application with some React components integrated thanks to
+webpacker and the `react_rails` gem, as usual:
 
-* Database creation
+```
+$ bundle install
+$ yarn install
+$ bundle exec foreman start -f Procfile.dev # for development
+$ ./bin/rails server # If you want to run the Rails server only
+```
 
-* Database initialization
+## Test
 
-* How to run the test suite
+This project includes a couple ways of testing to ensure everything is working
+as intended:
 
-* Services (job queues, cache servers, search engines, etc.)
+**For Unit Tests**
+```
+$ ./bin/rails test
+```
 
-* Deployment instructions
+**For Jest Tests**
+```
+$ yarn test
+```
 
-* ...
+## Demo
+
+You can easily find a working demo up and running on Heroku:
+
+[https://salesloft-mariogmz.herokuapp.com/](https://salesloft-mariogmz.herokuapp.com/)
+
+Here you can navigate using the buttons or going directly using URLs
+```
+1. List (/)
+2. Frequency (/frequency)
+3. Duplicates (/duplicates)
+```
+
+Made with love <3 by Mario Gómez (mariogomezmtz@gmail.com)
+[Visit my site!](http://www.mariogmz.com)
