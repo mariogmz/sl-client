@@ -4,7 +4,7 @@ import { DataGrid } from "@material-ui/data-grid";
 import styled from "styled-components";
 
 const StyledPeopleList = styled.div`
-  height: 100vh;
+  flex: 1;
   width: 100%;
 `;
 
@@ -25,11 +25,7 @@ const PeopleList = ({people}) => {
 };
 
 PeopleList.propTypes = {
-  people: PropTypes.array,
-};
-
-PeopleList.defaultProps = {
-  people: [],
+  people: PropTypes.array.isRequired,
 };
 
 export default PeopleList;
