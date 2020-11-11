@@ -18,7 +18,7 @@ module SalesLoft
 
     test "successful request" do
       stub_get_people_sucess
-      assert_instance_of OpenStruct, @subject.people
+      assert_instance_of Hash, @subject.people
     end
 
     test "request failure" do
@@ -37,7 +37,7 @@ module SalesLoft
 
     test "#people" do
       stub_get_people_sucess
-      assert @subject.people.data
+      assert @subject.people[:data]
     end
 
     private

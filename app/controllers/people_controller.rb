@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
   before_action :initialize_salessoft_client
 
   def list
-    @people = @client.people.data
+    @people = @client.people[:data]
   end
 
   def frequency
