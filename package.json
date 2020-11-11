@@ -1,6 +1,15 @@
 {
   "name": "sl_client",
   "private": true,
+  "engines": {
+    "node": "12.16.2"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --config .jestrc.json",
+    "lint": "yarn eslint \"{app,test}/javascript/**/*.{js,jsx}\"",
+    "lint:fix": "yarn prettier --write \"{app,test}/javascript/**/*.{js,jsx}\" && yarn eslint --fix \"{app,test}/javascript/**/*.{js,jsx}\" "
+  },
   "dependencies": {
     "@babel/preset-react": "^7.12.5",
     "@material-ui/core": "^4.11.0",
