@@ -26,5 +26,5 @@ describe("Navigator component", () => {
     expect(getByText("List")).toBeInTheDocument();
     expect(getByText("Frequency")).toBeInTheDocument();
     expect(getByText("Duplicates")).toBeInTheDocument();
-  })
+  });
 });

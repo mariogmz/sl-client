@@ -19,7 +19,7 @@ const PeopleList = ({people}) => {
 
   return (
     <StyledPeopleList className="people-list">
-      <DataGrid rows={people} columns={columns} autoPageSize />
+      <DataGrid rows={people} columns={columns} autoPageSize data-testid="datagrid" />
     </StyledPeopleList>
   );
 };
