@@ -12,6 +12,7 @@ class PeopleController < ApplicationController
   end
 
   def duplicates
+    @data = SalesLoft::PeopleService.find_duplicates(@client.people[:data])
   end
 
   private

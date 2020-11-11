@@ -13,6 +13,11 @@ module SalesLoft
       assert_equal sample_frequency_result, result
     end
 
+    test "#find_duplicates" do
+      result = @subject.find_duplicates(sample_duplicated_input)
+      assert_equal sample_duplicated_result, result
+    end
+
     private
       def sample_input
         [
@@ -50,6 +55,23 @@ module SalesLoft
           { letter: "l", frequency: 2 },
           { letter: "g", frequency: 2 },
           { letter: "o", frequency: 2 }
+        ]
+      end
+
+      def sample_duplicated_input
+        sample_input.push({
+          "id": 251436158,
+          "first_name": "No",
+          "last_name": "Duplicate",
+          "display_name": "No Duplicate",
+          "email_address": "john.doe@gmail.com",
+          "full_email_address": "\"John Doe\" <john.doe@gmail.com>"
+        })
+      end
+
+      def sample_duplicated_result
+        [
+          { email:"sakatius@gmail.com", duplicated: "sakatiuss@gmail.com" }
         ]
       end
   end
