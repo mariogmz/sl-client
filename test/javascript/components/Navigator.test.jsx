@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Navigator from 'components/Navigator';
+import Navigator from "components/Navigator";
 
 const navigator = {
   listUrl: "/",
